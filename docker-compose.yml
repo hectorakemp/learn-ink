@@ -10,6 +10,22 @@ services:
     volumes:
       - ./stacks:/appsmith-stacks
     restart: unless-stopped
+  mongodb:
+    image: mongo:latest
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: learnink
+      MONGO_INITDB_ROOT_PASSWORD: chandler
+    restart: always
+# appsmith  |     "user" : "appsmith",
+# appsmith  |     "roles" : [
+# appsmith  |             {
+# appsmith  |                     "role" : "root",
+# appsmith  |                     "db" : "admin"
+# appsmith  |             },
+# appsmith  |             "readWrite"
+# appsmith  |     ]
+# appsmith  | }
   #   # Uncomment the lines below to enable auto-update
   #   labels:
   #     com.centurylinklabs.watchtower.enable: "true"
