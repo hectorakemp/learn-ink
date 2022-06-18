@@ -1,0 +1,4 @@
+#+title: LearnInk
+
+* TODO run appsmith container locally
+* TODO find way to set ownership of local dockerfile
